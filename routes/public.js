@@ -2,16 +2,10 @@ const express = require("express")
 
 const routes = express.Router()
 
-const UsersControll = require("../Controllers/UsersController")
+const BookController = require("../controller/BookController")
 
-const HomeController = require("../Controllers/PageController")
+routes.get("/", BookController.all)
 
-routes.get("/", PageController.index)
 
-routes.post("/", UsersControll.Insert)
-
-routes.get("/login", PageController.index)
-
-routes.post("/login", UsersControll.Insert)
 
 module.exports = routes
