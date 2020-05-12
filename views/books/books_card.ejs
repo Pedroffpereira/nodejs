@@ -1,13 +1,19 @@
+<% if (books) { %>
+<% for (var i=0; i< books.length; i++) { %>
+
 <div class="col-md-4 col-sm-6 mt-1">
     <div class="card">
-        <img alt="Consciência Quântica"
-            src="https://img.bertrand.pt/images/consciencia-quantica-amit-goswami/NDV8MjM5MzU3MTN8MTk5NjU0NjF8MTU4ODExNDgwMDAwMA==/175x&amp;ctx=0"
-            class="img-responsive lazy ">
+        <img src='public/img/<%=books[i].img_cover %>' class="img-responsive lazy">
 
         <div class="card-body">
-            <div class="price">10,00€</div>
-            <div class="title">Consiencia Quantica  <%- books.length %></div>
-            <div class="auther">De Pedro Pereira</div>
+            <div class="price"><%= books[i].price %></div>
+            <div class="title"> <%= books[i].Name %></div>
+            <div class="auther"><%= books[i].author_id %></div>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+
         </div>
     </div>
 </div>
+<% } %>
+<% } %>

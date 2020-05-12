@@ -7,6 +7,7 @@ const port = 3000
 
 app.set('view engine','ejs')
 app.set('Views','./views')
+
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: false}))
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
