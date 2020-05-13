@@ -1,19 +1,19 @@
 <% if (books) { %>
-<% for (var i=0; i< books.length; i++) { %>
+    <% for (var i=0; i< books.length; i++) { %>
 
-<div class="col-md-4 col-sm-6 mt-1">
-    <div class="card">
-        <img src='public/img/<%=books[i].img_cover %>' class="img-responsive lazy">
+        <div class="col-md-4 col-sm-6 mt-1">
+            <div class="card">
+                <img src='public/img/<%=books[i].img_cover %>' class="img-responsive lazy">
 
-        <div class="card-body">
-            <div class="price"><%= books[i].price %></div>
-            <div class="title"> <%= books[i].Name %></div>
-            <div class="auther"><%= books[i].author_id %></div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-  
+                <div class="card-body">
+                    <div class="price"><%= books[i].price %> €</div>
+                    <div class="title"> <%= books[i].Name %></div>
+                    <div class="auther">De <%= books[i].author_id %></div>
+                    <a href="#" class="btn btn-primary">Comprar</a>
 
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<% } %>
+    <% } %>
 <% } %>
