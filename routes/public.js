@@ -10,6 +10,6 @@ routes.get("/", BookController.all)
 
 routes.get("/login", UserControler.show_login_page)
 
-routes.get("/regist", UserControler.show_registation_page)
-routes.post("/regist", UserControler.regist)
+routes.get("/registro", UserControler.show_registation_page)
+routes.post("/registro", UserControler.regist)
 module.exports = routes
